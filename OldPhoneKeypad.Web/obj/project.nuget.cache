@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tmszdx/mhDs=",
+  "dgSpecHash": "N2M8X33U/Bg=",
   "success": true,
   "projectFilePath": "D:\\OldPhoneKeypad\\OldPhoneKeypad.Web\\OldPhoneKeypad.Web.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pla\\.nuget\\packages\\ardalis.smartenum\\8.2.0\\ardalis.smartenum.8.2.0.nupkg.sha512",
     "C:\\Users\\pla\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.15\\microsoft.aspnetcore.authorization.8.0.15.nupkg.sha512",
     "C:\\Users\\pla\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.15\\microsoft.aspnetcore.components.8.0.15.nupkg.sha512",
     "C:\\Users\\pla\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.15\\microsoft.aspnetcore.components.analyzers.8.0.15.nupkg.sha512",
