@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldPhoneKeypad.Web", "OldPhoneKeypad.Web\OldPhoneKeypad.Web.csproj", "{8B0C713C-0DF3-4F99-9F2A-97F0D8052E8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldPhoneKeypad.Core", "OldPhoneKeypad.Core\OldPhoneKeypad.Core.csproj", "{3AF06641-29F3-4AE5-BA27-0BC024142E98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldPhoneKeypad.Core.Tests", "OldPhoneKeypad.Core.Tests\OldPhoneKeypad.Core.Tests.csproj", "{17672E88-7E33-4C72-8BED-F40C96A471C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,9 +21,20 @@ Global
 		{8B0C713C-0DF3-4F99-9F2A-97F0D8052E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B0C713C-0DF3-4F99-9F2A-97F0D8052E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B0C713C-0DF3-4F99-9F2A-97F0D8052E8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF06641-29F3-4AE5-BA27-0BC024142E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF06641-29F3-4AE5-BA27-0BC024142E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF06641-29F3-4AE5-BA27-0BC024142E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF06641-29F3-4AE5-BA27-0BC024142E98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17672E88-7E33-4C72-8BED-F40C96A471C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17672E88-7E33-4C72-8BED-F40C96A471C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17672E88-7E33-4C72-8BED-F40C96A471C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17672E88-7E33-4C72-8BED-F40C96A471C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17672E88-7E33-4C72-8BED-F40C96A471C7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66D9DB91-41EF-4D0F-BA24-6D23672E0BE1}
