@@ -1,5 +1,4 @@
 ﻿*.txt
-*.cs
 *.json
 *.Up2Date
 *.cache
@@ -12,7 +11,6 @@ OldPhoneKeypad.Web/obj/Debug/net8.0/OldPhoneKeypad.Web.pdb
 OldPhoneKeypad.Web/obj/Debug/net8.0/ref/OldPhoneKeypad.Web.dll
 OldPhoneKeypad.Web/obj/Debug/net8.0/refint/OldPhoneKeypad.Web.dll
 OldPhoneKeypad.Web/obj/Debug/net8.0/scopedcss/bundle/OldPhoneKeypad.Web.styles.css
-*.css
 *.build
 OldPhoneKeypad.Web/obj/Debug/net8.0/staticwebassets/msbuild.build.OldPhoneKeypad.Web.props
 OldPhoneKeypad.Web/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.OldPhoneKeypad.Web.props
