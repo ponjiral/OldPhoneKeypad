@@ -5,26 +5,31 @@
 
 <PageTitle>OldPhonePad</PageTitle>
 <h1>Welcome to OldPhonePad</h1>
-<InputText id="digitInput" class="form-control" @bind-Value="ViewModel.DigitString" placeholder="Enter pad" maxlength="250" @oninput="HandleProcessDigitInput" />
+<InputText id="digitInput" class="form-control" @bind-Value="digitInput" placeholder="Enter pad" maxlength="250" @onblur="HandleProcessDigitInput" />
 <br />
 <button type="button" class="btn btn-outline-primary" @onclick="ClearDigitInput">Clear</button>
 
 <br />
 <br />
-<h4 class="alert-heading">Digit Wording => @ViewModel.OutputText</h4>
+<h4>Digit Wording => @ViewModel.OutputText</h4>
 
 @code {
     private string digitInput { get; set; } = default!;
 
     protected override void OnInitialized() => base.OnInitialized();
 
-    private async Task ClearDigitInput() => ViewModel.DigitString = string.Empty;
+    private async Task ClearDigitInput()
+    {
+        digitInput = string.Empty;
+        ViewModel.DigitString = string.Empty; 
+        ViewModel.OutputText = string.Empty;
+    }
 
     private async Task HandleProcessDigitInput()
     {
-        if (ViewModel?.DigitString?.Contains("#") == true)
+        if (digitInput?.Contains("#") == true)
         {
-            ViewModel.DigitString = ViewModel.DigitString.Replace("#", string.Empty);
+            ViewModel.DigitString = digitInput.Replace("#", string.Empty);
             await ViewModel.HandleProcessDigitInput();
         }
     }
