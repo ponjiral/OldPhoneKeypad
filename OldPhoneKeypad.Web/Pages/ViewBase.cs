@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 using OldPhoneKeypad.Core.Interfaces;
-using OldPhoneKeypad.Core.Models;
 
 namespace OldPhoneKeypad.Web.Pages
 {
