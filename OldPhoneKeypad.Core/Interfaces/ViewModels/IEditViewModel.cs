@@ -3,8 +3,7 @@
     public interface IEditViewModel : IViewModel
     {
         string DigitString { get; set; }
-
-        Task LoadSellerCommissions();
-        Task LoadSellerSummary();
+        string OutputText { get; set; }
+        Task HandleProcessDigitInput();
     }
 }

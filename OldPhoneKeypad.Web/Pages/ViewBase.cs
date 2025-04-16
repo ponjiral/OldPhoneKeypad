@@ -9,7 +9,6 @@ namespace OldPhoneKeypad.Web.Pages
         [Inject]
         public IVM ViewModel { get; set; } = default!;
 
-        public AlertOption AlertOption { get; set; } = new();
         public bool IsPageLoading { get; set; }
         public bool IsLoading { get; set; }
         public virtual bool IsNeedPermissionAccess => false;
@@ -18,7 +17,6 @@ namespace OldPhoneKeypad.Web.Pages
         {
             FULLPAGE,
             PARTIAL,
-            MODAL,
             NONE
         }
 
@@ -33,7 +31,6 @@ namespace OldPhoneKeypad.Web.Pages
             {
                 await InvokeAsync(StateHasChanged);
                 SetLoading(loadingType, true);
-                AlertOption.Clear();
 
                 await func();
             }
@@ -62,13 +59,6 @@ namespace OldPhoneKeypad.Web.Pages
                 case LoadingType.PARTIAL:
                     IsLoading = isLoading;
                     break;
-
-                //case LoadingType.MODAL:
-                //    if (isLoading)
-                //        LoadingModal = ModalHelper.ShowLoadingMessageAsync("&lt;strong&gt;System is processing&lt;/strong&gt;&lt;br/&gt;Please wait");
-                //    else
-                //        LoadingModal.Close();
-                //    break;
 
                 default:
                     return;

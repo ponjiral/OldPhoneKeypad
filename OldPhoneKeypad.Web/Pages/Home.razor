@@ -1,7 +1,31 @@
-﻿@page "/"
+﻿@attribute [Route(AppConstants.PAGE_HOME)]
+@using OldPhoneKeypad.Core.Constants
+@using OldPhoneKeypad.Core.Interfaces.ViewModels;
+@inherits ViewBase<IEditViewModel>;  
 
-<PageTitle>Home</PageTitle>
+<PageTitle>OldPhonePad</PageTitle>
+<h1>Welcome to OldPhonePad</h1>
+<InputText id="digitInput" class="form-control" @bind-Value="ViewModel.DigitString" placeholder="Enter pad" maxlength="250" @oninput="HandleProcessDigitInput" />
+<br />
+<button type="button" class="btn btn-outline-primary" @onclick="ClearDigitInput">Clear</button>
 
-<h1>Hello, world!</h1>
+<br />
+<br />
+<h4 class="alert-heading">Digit Wording => @ViewModel.OutputText</h4>
 
-Welcome to your new app.
+@code {
+    private string digitInput { get; set; } = default!;
+
+    protected override void OnInitialized() => base.OnInitialized();
+
+    private async Task ClearDigitInput() => ViewModel.DigitString = string.Empty;
+
+    private async Task HandleProcessDigitInput()
+    {
+        if (ViewModel?.DigitString?.Contains("#") == true)
+        {
+            ViewModel.DigitString = ViewModel.DigitString.Replace("#", string.Empty);
+            await ViewModel.HandleProcessDigitInput();
+        }
+    }
+}
