@@ -21,7 +21,6 @@
     private async Task ClearDigitInput()
     {
         digitInput = string.Empty;
-        ViewModel.DigitString = string.Empty; 
         ViewModel.OutputText = string.Empty;
     }
 
@@ -29,8 +28,7 @@
     {
         if (digitInput?.Contains("#") == true)
         {
-            ViewModel.DigitString = digitInput.Replace("#", string.Empty);
-            await ViewModel.HandleProcessDigitInput();
+            await ViewModel.HandleProcessDigitInput(digitInput);
         }
     }
 }

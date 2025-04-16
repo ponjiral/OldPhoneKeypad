@@ -4,6 +4,6 @@
     {
         string DigitString { get; set; }
         string OutputText { get; set; }
-        Task HandleProcessDigitInput();
+        Task HandleProcessDigitInput(string inputText);
     }
 }
