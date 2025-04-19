@@ -90,7 +90,7 @@ namespace OldPhoneKeypad.Core.ViewModels
                     result.Add(letter);
             }
 
-            OutputText = string.Join("", result);
+            OutputText = string.Join("", result).ToUpper();
             return Task.CompletedTask;
         }
 
