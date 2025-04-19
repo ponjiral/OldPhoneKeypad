@@ -14,9 +14,20 @@ namespace OldPhoneKeypad.Core.ViewModels
         {
 
         }
-        public async Task LoadSellerSummary()
-        {
 
+        private string? ResolveBuffer(string buffer)
+        {
+            var digit = buffer[0].ToString();
+            int pressCount = buffer.Length;
+
+            if (!DigitCharecters.ContainsKey(digit))
+                return null;
+
+            var characters = DigitCharecters.GetCharacters(digit);
+            if (pressCount > characters.Length)
+                pressCount = characters.Length; // Clamp to max
+
+            return characters[pressCount - 1];
         }
     }
 }
