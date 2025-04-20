@@ -52,13 +52,13 @@ namespace OldPhoneKeypad.Core.ViewModels
                 }
                 else if (char.IsDigit(current))
                 {
-                    // If buffer is empty or repeating the same digit
                     if (buffer.Length == 0 || buffer[^1] == current)
                     {
                         buffer.Append(current);
 
-                        // If buffer exceeded 4 — invalid
-                        if (buffer.Length > 4)
+                        var digit = buffer[0].ToString();
+                        int maxAllowed = DigitCharecters.MaxPressCount(digit);
+                        if (buffer.Length > maxAllowed)
                         {
                             OutputText = "The digit length should be 1–4.";
                             return Task.CompletedTask;
@@ -66,7 +66,6 @@ namespace OldPhoneKeypad.Core.ViewModels
                     }
                     else
                     {
-                        // Resolve the buffer
                         var letter = ResolveBuffer(buffer.ToString());
                         if (letter == null) return Task.CompletedTask;
 

@@ -25,5 +25,10 @@ namespace OldPhoneKeypad.Core.Enums.KeyPadNumber
                 return chars;
             return Array.Empty<string>();
         }
+
+        public int MaxPressCount(string digit)
+        {
+            return _buttonMappings.TryGetValue(digit, out var chars) ? chars.Length : 0;
+        }
     }
 }
